@@ -41,7 +41,9 @@ ${props =>`
 
 `
 const Logo  = styled.img`
-height:50px;`
+height:50px;
+filter: drop-shadow(10px 10px 3px #ffffff);
+`
 const List  = styled.ul`
 align-items:center;
 gap:20px;
@@ -63,15 +65,18 @@ ${props =>`
 `
 const ListItem  = styled.li<ListProps>`
 cursor:pointer;
-font-family:Poppins, sans-serif;
-font-size: 1.2
+font-family:"Roboto", cursive;
+font-size: 1.2rem;
 &:hover{
-    color:black;
+    color:#9F2B68
 }
 `
 const Icon  = styled.img`
 height:30px;
 width:30px;
+&:hover{
+    cursor:pointer;
+}
 ${props =>`
       /* Media query styles */
       @media (max-width: 768px) {
