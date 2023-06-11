@@ -15,7 +15,8 @@ module.exports = {
       sans: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
       trispace :['Trispace', 'sans-serif'],
-      abril:['Abril Fatface','cursive']
+      abril:['Abril Fatface','cursive'],
+      roboto: ['Roboto', 'cursive']
 
     },
   
