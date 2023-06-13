@@ -5,11 +5,20 @@ const Section = styled.div`
     height: 100vh;
     scroll-snap-align : center;
 `
+const Container = styled.div`
+    height: 100vh;
+    scroll-snap-align : center;
+`
+
 
 
 const  Contact = () => {
   return (
-    <Section> Contact </Section>
+    <Section>
+      <Container>
+          Contact
+      </Container>
+    </Section>
   )
 }
 

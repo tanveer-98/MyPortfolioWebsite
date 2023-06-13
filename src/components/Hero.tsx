@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import AnimatedHand from './AnimatedHand';
+import { SectionWrapper } from '../hoc/SectionWrapper';
 
 const Section = styled.div`
   height: 100%;
@@ -164,4 +165,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { SectionWrapper } from '../hoc/SectionWrapper';
 
 const SkillsList = [
   "ReactJS",
@@ -7,7 +8,7 @@ const SkillsList = [
   "MongoDB",
   "ExpressJS",
   "SpringBoot",
-  "SQL"
+  "SQL",
 ]
 
 const Section = styled.div`
@@ -101,4 +102,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default SectionWrapper(Skills,"");

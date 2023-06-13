@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Hero from './components/Hero'
-import Contact from './components/Contact'
+import Contact from './components/Socials'
 import Who from './components/Who'
-import Works from './components/Skills'
+import Skills from './components/Skills'
 import styled from 'styled-components';
-
+import Works from './components/Works'
 
 const Container = styled.div`
 height : 100% ; 
@@ -31,7 +31,8 @@ function App() {
   return (
    <Container>
       <Hero/>
-      <Works/>      
+      <Skills/>      
+      <Works/>
       <Contact/>
       <Who/>
     </Container>
