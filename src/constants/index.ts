@@ -23,6 +23,7 @@ import {
     jobit,
     tripguide,
     threejs,
+    // arrowrightup
   } from "../assets";
   
   export const navLinks = [
@@ -105,13 +106,13 @@ import {
       icon: git,
     },
     {
-      name: "figma",
+      name: "SpringBoot",
       icon: figma,
     },
     {
       name: "docker",
       icon: docker,
-    },
+    }
   ];
 
   
@@ -173,7 +174,8 @@ import {
 
   export const projects = [
     {
-      name: "Car Rent",
+      id: 1, 
+      name: "Blog Web App",
       description:
         "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
       tags: [
@@ -190,10 +192,35 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      type : "javascript",
+      image: "./img/blog.png",
+      source_code_link: "https://blogwiz.netlify.app/",
     },
     {
+      id: 2, 
+      name: "Blog Web App",
+      description:
+        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: "./img/blog.png",
+      type : "Full Stack",
+      source_code_link: "https://blogwiz.netlify.app/",
+    },
+    {
+      id: 3, 
       name: "Ganasuraksha Party WebApp",
       description:
         "A web App created for a political Party to manage their",
@@ -211,10 +238,13 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      type : "Full Stack",
+      image: "./img/gsp.png",
+      source_code_link: "https://www.ganasurakshaparty.in/",
+    
     },
     {
+      id: 4, 
       name: "Crystal Coaching Website",
       description:
         "A Website Created for A coaching Company that provides the customer access to their required study materials at one place",
@@ -236,13 +266,16 @@ import {
           color: "pink-text-gradient",
         },
         {
-
+          name: "ExpresJS",
+          color: "pink-text-gradient",
         }
       ],
+      type : "Full Stack",
       image: "./img/crystal.png",
       source_code_link: "https://www.crystalcoaching.in/",
     },
     {
+      id: 5, 
         name: "Apex Design & Construction",
         description:
           "A WebApp created for Booking Schedules for Construction and Design.",
@@ -264,7 +297,57 @@ import {
             color: "blue-text-gradient",
           },
         ],
+        type : "Full Stack",
         image: "./img/apex.png",
         source_code_link: "https://www.apexconst.in",
       },
+      {
+        id: 6, 
+          name: "Task Management Web App",
+          description:
+            "A TaskMangement Rest App for managing tasks",
+          tags: [
+            {
+              name: "nodeJs",
+              color: "blue-text-gradient",
+            },
+            {
+              name: "mongodb",
+              color: "green-text-gradient",
+            },
+            {
+              name: "expressJS",
+              color: "pink-text-gradient",
+            },
+    
+          ],
+          type : "Backend",
+          image: "./img/apex.png",
+          source_code_link: "https://www.apexconst.in",
+        },
+
+        {
+          id: 6, 
+            name: "Weather Forecast Web App",
+            description:
+              "A weather forecasting web app providing weather results for given location using 3rd party API",
+            tags: [
+              {
+                name: "nodeJs",
+                color: "blue-text-gradient",
+              },
+              {
+                name: "mongodb",
+                color: "green-text-gradient",
+              },
+              {
+                name: "expressJS",
+                color: "pink-text-gradient",
+              },
+      
+            ],
+            type : "Backend",
+            image: "./img/apex.png",
+            source_code_link: "https://www.apexconst.in",
+          },
   ];

@@ -1,4 +1,5 @@
 import React from "react";
+//@ts-ignore
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -7,8 +8,15 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc/SectionWrapper";
 import { projects } from "../constants";
 import { fadeIn } from "../utils/motion";
+import Tag from "./Tag";
+
+interface ITag {
+  name: string;
+  color: string;
+}
 
 const ProjectCard = ({
+  id,
   index,
   name,
   description,
@@ -16,37 +24,68 @@ const ProjectCard = ({
   image,
   source_code_link,
 }: any) => {
+  console.log("KEY" + id);
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl
-       sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="
-            w-full h-full object-cover rounded-2xl"
-          />
+    // <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    // key={id}
+    // >
+    <Tilt
+      options={{
+        max: 45,
+        scale: 1,
+        speed: 450,
+      }}
+      className="bg-tertiary p-5 rounded-2xl
+       sm:w-[360px] w-full h-full"
+    >
+      <div className="relative w-full h-full" key={index}>
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full bg-cover rounded-2xl"
+        />
+        <div className="flex flex-wrap w-full px-4 mt-2 gap-2">
+          {tags.map((tag: ITag) => (
+            <Tag name={tag.name} color={tag.color} />
+          ))}
+        </div>
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
+        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div
+            onClick={() => window.open(source_code_link, "_blank")}
+            // __blank means url will open in a new window
 
-              // __blank means url will open in a new window 
-    
-             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+            className="rounded-full bg-gradient  w-10 h-10 flex justify-center items-center cursor-pointer"
+          >
+            <div className="rounded-full hover:shadow-lg">
+              <img
+                src={github}
+                alt={github}
+                className="object-contain rounded-full  hover:scale-110 hover:shadow-black"
+              />
+            </div>
+          </div>
+          <div
+            onClick={() => window.open(source_code_link, "_blank")}
+            // __blank means url will open in a new window
+
+            className="rounded-full bg-gradient  w-10 h-10 flex hover:scale-110  justify-center items-center cursor-pointer"
+          >
+            <div className="relative group bg-white rounded-full p-2 ">
+              <img
+                src="./img/arrow-right-up.svg"
+                alt="arrow right up image"
+                className="object-contain  hover:shadow-black"
+              />
+              <span className=" text-black bg-white rounded-md block right-0 bottom-10 p-1 shadow-md shadow-black scale-0 absolute group-hover:scale-100 ">
+                Visit Site
+              </span>
             </div>
           </div>
         </div>
-      </Tilt>
-    </motion.div>
+      </div>
+    </Tilt>
+    // </motion.div>
   );
 };
 

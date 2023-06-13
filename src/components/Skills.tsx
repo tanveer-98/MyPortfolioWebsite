@@ -74,10 +74,7 @@ position: relative;
 
   }
 }
-
-
 `
-
 const Skills = () => {
   return (
     <Section> 
