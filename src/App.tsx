@@ -34,7 +34,7 @@ function App() {
       <Skills/>      
       <Works/>
       <Contact/>
-      <Who/>
+      {/* <Who/> */}
     </Container>
   )
 }

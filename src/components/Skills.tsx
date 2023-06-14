@@ -51,7 +51,6 @@ position: relative;
   font-size: 40px;
 }
 
-
 &::after{
 
   content:'${props =>props.children?.toString()}';
@@ -81,11 +80,8 @@ const Skills = () => {
       <Container>
         <Left>
           <List>
-            {
-              SkillsList.map((skill)=>{
-               return <ListItem>
-                {skill}
-               </ListItem> 
+            {SkillsList.map((skill)=>{
+               return <ListItem>{skill}</ListItem> 
               })
             }
           </List>

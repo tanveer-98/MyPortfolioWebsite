@@ -11,7 +11,7 @@ import ProjectCard from "./ProjectCard";
 const ProjectTypes = [
   { name: "Full Stack", id: 1 },
   { name: "Backend", id: 2 },
-  { name: "javascript", id: 3 },
+  // { name: "javascript", id: 3 },
 ];
 
 interface ITag {
@@ -38,19 +38,23 @@ const Loading = styled.div`
 `;
 
 const Works = () => {
-  const [currentType, setCurrentType] = useState<string>(ProjectTypes[0].name);
-  const [selected, setSelected] = useState<Array<IProject> | null>(null);
+  const [currentType, setCurrentType] = useState<string>("all");
+  const [selected, setSelected] = useState<Array<IProject> | null>(projects);
 
   const handlecurrentType = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCurrentType(e.target.value);
   };
 
   useEffect(() => {
-    const filteredProjects = projects.filter(
-      (project: IProject) => project.type === currentType
-    );
-    setSelected(filteredProjects);
-    console.log(filteredProjects);
+    if(currentType !=="all"){
+      const filteredProjects = projects.filter(
+        (project: IProject) => project.type === currentType
+      );
+      setSelected(filteredProjects);    
+    }
+    else {
+      setSelected(projects)
+    }
   }, [currentType]);
 
   // useEffect(() => {
@@ -62,7 +66,7 @@ const Works = () => {
       <div className={styles.paddingX + styles.paddingY}>
         <motion.div variants={textVariant(1)}>
           <p className={styles.sectionSubText}> My Work</p>
-          <h2 className={styles.sectionHeadText}> Project. </h2>
+          <h2 className={styles.sectionHeadText}> Project.. </h2>
         </motion.div>
         <div className="w-full flex">
           <motion.p
@@ -90,12 +94,12 @@ const Works = () => {
           id="projectType"
           className="bg-slate-400 text-black text-sm rounded-md p-2"
         >
-          {/* <option
-            value="default"
+          <option
+            value="all"
             className="bg-slate-400 rounded-md text-white"
           >
-            --Select Type--
-          </option> */}
+            All Projects
+          </option>
           {ProjectTypes.map((type) => (
             <option
               className="bg-slate-400 mt-1 rounded-md text-white"

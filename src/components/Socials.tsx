@@ -6,13 +6,17 @@ const Section = styled.div`
     scroll-snap-align : center;
 `
 const Container = styled.div`
-    height: 100vh;
+    
     scroll-snap-align : center;
+    display:flex;
+    justify-content : center;
+    align-items:center;
+    width:100%;
 `
 
 
 
-const  Contact = () => {
+const  Socials = () => {
   return (
     <Section>
       <Container>
@@ -22,4 +26,4 @@ const  Contact = () => {
   )
 }
 
-export default  Contact;
+export default  Socials;

@@ -42,14 +42,19 @@ const ProjectCard = ({
         <img
           src={image}
           alt={name}
-          className="w-full h-full bg-cover rounded-2xl"
+          className="w-full h-full bg-contain rounded-2xl"
         />
-        <div className="flex flex-wrap w-full px-4 mt-2 gap-2">
+
+        <div className="mt-5 px-2">
+          <h3 className="text-white font-bold text-[24px]" >{name}</h3>
+            <p className="mt-2 text-secondary text-[14px]">{description}</p>
+        </div>
+
+        <div className="flex flex-wrap w-full px-2 mt-2 gap-2">
           {tags.map((tag: ITag) => (
             <Tag name={tag.name} color={tag.color} />
           ))}
         </div>
-
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           <div
             onClick={() => window.open(source_code_link, "_blank")}

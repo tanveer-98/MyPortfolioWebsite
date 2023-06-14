@@ -173,29 +173,29 @@ import {
   
 
   export const projects = [
-    {
-      id: 1, 
-      name: "Blog Web App",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      type : "javascript",
-      image: "./img/blog.png",
-      source_code_link: "https://blogwiz.netlify.app/",
-    },
+    // {
+    //   id: 1, 
+    //   name: "Blog Web App",
+    //   description:
+    //     "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    //   tags: [
+    //     {
+    //       name: "react",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "mongodb",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "tailwind",
+    //       color: "pink-text-gradient",
+    //     },
+    //   ],
+    //   type : "javascript",
+    //   image: "./img/blog.png",
+    //   source_code_link: "https://blogwiz.netlify.app/",
+    // },
     {
       id: 2, 
       name: "Blog Web App",
@@ -223,7 +223,7 @@ import {
       id: 3, 
       name: "Ganasuraksha Party WebApp",
       description:
-        "A web App created for a political Party to manage their",
+        "A web App created for a political Party to manage and view their employee data ",
       tags: [
         {
           name: "react",
@@ -322,12 +322,12 @@ import {
     
           ],
           type : "Backend",
-          image: "./img/apex.png",
-          source_code_link: "https://www.apexconst.in",
+          image: "./img/noimage.png",
+          source_code_link: "https://github.com/tanveer-98/TaskManagement-App",
         },
 
         {
-          id: 6, 
+          id: 7, 
             name: "Weather Forecast Web App",
             description:
               "A weather forecasting web app providing weather results for given location using 3rd party API",
@@ -347,7 +347,35 @@ import {
       
             ],
             type : "Backend",
-            image: "./img/apex.png",
+            image: "./img/noimage.png",
             source_code_link: "https://www.apexconst.in",
           },
+          {
+            id: 8, 
+              name: "Chat App ",
+              description:
+                "A Live chat app to Transfer messages at real time using websockets  ",
+              tags: [
+                {
+                  name: "nodeJs",
+                  color: "blue-text-gradient",
+                },
+                {
+                  name: "mongodb",
+                  color: "green-text-gradient",
+                },
+                {
+                  name: "expressJS",
+                  color: "pink-text-gradient",
+                },
+                {
+                  name: "WebSocket",
+                  color: "pink-text-gradient",
+                },
+        
+              ],
+              type : "Backend",
+              image: "./img/noimage.png",
+              source_code_link: "https://github.com/tanveer-98/chat-app-nodejs",
+            },
   ];

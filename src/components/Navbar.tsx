@@ -103,28 +103,30 @@ border:none;
 }
 `
 
+import File from '../assets/Tanveer_Ahmed_Resume.pdf';
+
+
 const Navbar = () => {
   return (
     <Section>
         <Container>
             <Links>
-            <Logo className="h-[50px] w-[100px]" src = "./img/logo.png"/>
+            <Logo className="h-[50px] w-[100px]" src="./img/logo.png"/>
 
             <List>
                 <ListItem>Home</ListItem>
-                <ListItem>Studio</ListItem>
+                {/* <ListItem>Studio</ListItem> */}
                 <ListItem>Works</ListItem>
                 <ListItem>Contact</ListItem>
             </List>
             </Links>
             <Icons >
                 <Icon src="./img/search.png"/>
-                <Button>  Hire Me </Button>
+                <Button>
+                <a href={File} download={File}> Resume</a>
 
-
+                </Button>
             </Icons>
-
-
         </Container>
 
     </Section>
