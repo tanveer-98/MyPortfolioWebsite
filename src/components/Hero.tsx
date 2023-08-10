@@ -39,7 +39,9 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 20px;
+  height : 100%;
 
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -100,9 +102,12 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 3;
+  // display : flex;
   position: relative;
+ 
   @media only screen and (max-width: 768px) {
-    flex: 1;
+    flex: 0;
+    height: 300px;
     width: 100%;
   }
 `;
@@ -122,6 +127,7 @@ const Img = styled.img`
   @media only screen and (max-width: 768px) {
     width: 300px;
     height: 300px;
+    margin: 0px auto;
   }
 
   @keyframes animate {
@@ -132,14 +138,19 @@ const Img = styled.img`
 `;
 
 
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { fadeIn, textVariant } from "../utils/motion";
+
 const Hero = () => {
   return (
     <Section>
       <Navbar/>
       <Container>
+        <motion.div>
         <Left>
           <Title className="font-roboto">
-            Hi !   <div className="">
+            Hi !   <div className="flex justify-center items-center">
               <div className="text-purple-400">I am Tanveer <AnimatedHand/></div> 
            
               </div>
@@ -153,6 +164,7 @@ const Hero = () => {
           </WhatIDo>
           <Desc>I enjoy Creating WebApps and Websites</Desc>
         </Left>
+        </motion.div>
         <Right>
           {/* 3D model */}
           <Img src="./img/moon.png"/>

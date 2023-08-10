@@ -12,7 +12,7 @@ const SkillsList = [
 ]
 
 const Section = styled.div`
-    height: 100vh;
+    // height: 100vh;
     // background-color:white;
     scroll-snap-align : center;
     display: flex;
