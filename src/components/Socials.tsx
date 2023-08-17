@@ -105,7 +105,7 @@ const Socials = () => {
             xmlns="http://www.w3.org/2000/svg"
             
             onClick={()=>window.open(`https://wa.me/7002068268`,"__blank")}
-            className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer hover:translate-y-7"
+            className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
