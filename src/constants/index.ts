@@ -173,34 +173,34 @@ import {
   
 
   export const projects = [
-    // {
-    //   id: 1, 
-    //   name: "Blog Web App",
-    //   description:
-    //     "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    //   tags: [
-    //     {
-    //       name: "react",
-    //       color: "blue-text-gradient",
-    //     },
-    //     {
-    //       name: "mongodb",
-    //       color: "green-text-gradient",
-    //     },
-    //     {
-    //       name: "tailwind",
-    //       color: "pink-text-gradient",
-    //     },
-    //   ],
-    //   type : "javascript",
-    //   image: "./img/blog.png",
-    //   source_code_link: "https://blogwiz.netlify.app/",
-    // },
+    {
+      id: 1, 
+      name: "ANIFAV",
+      description:
+        "Web-based platform that allows users to view all trending anime and also save the anime in their favourite List ",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "GraphQL",
+          color: "green-text-gradient",
+        },
+        {
+          name: "emotionCSS",
+          color: "pink-text-gradient",
+        },
+      ],
+      type : "Frontend",
+      image: "./img/Anifav.png",
+      source_code_link: "https://anifav.netlify.app",
+    },
     {
       id: 2, 
       name: "Blog Web App",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "A blog writing web app where you can register , login and see blogs of your taste written by others as well as write your own blogs",
       tags: [
         {
           name: "react",

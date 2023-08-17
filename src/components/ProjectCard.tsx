@@ -22,6 +22,7 @@ const ProjectCard = ({
   description,
   tags,
   image,
+  type,
   source_code_link,
 }: any) => {
   console.log("KEY" + id);
@@ -35,19 +36,26 @@ const ProjectCard = ({
         scale: 1,
         speed: 450,
       }}
-      className="bg-tertiary p-5 rounded-2xl
+      className=" relative bg-tertiary p-5 rounded-2xl
        sm:w-[360px] w-full h-full"
     >
-      <div className="relative w-full h-full" key={index}>
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full bg-contain rounded-2xl"
-        />
+      <div className=" w-full h-full" key={index}>
+
+      {
+              type !="Backend" ? 
+              <img
+                src={image}
+                alt={name}
+                className="w-full h-full bg-contain rounded-2xl"
+                />
+
+              :""
+              
+            }
 
         <div className="mt-5 px-2">
-          <h3 className="text-white font-bold text-[24px]" >{name}</h3>
-            <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
         <div className="flex flex-wrap w-full px-2 mt-2 gap-2">
@@ -55,7 +63,7 @@ const ProjectCard = ({
             <Tag name={tag.name} color={tag.color} />
           ))}
         </div>
-        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+        <div className="absolute right-0 -top-14 flex justify-end m-3 card-img_hover">
           <div
             onClick={() => window.open(source_code_link, "_blank")}
             // __blank means url will open in a new window
@@ -82,6 +90,7 @@ const ProjectCard = ({
                 alt="arrow right up image"
                 className="object-contain  hover:shadow-black"
               />
+
               <span className=" text-black bg-white rounded-md block right-0 bottom-10 p-1 shadow-md shadow-black scale-0 absolute group-hover:scale-100 ">
                 Visit Site
               </span>

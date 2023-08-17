@@ -46,7 +46,8 @@ const Socials = () => {
           {/* <!-- Facebook --> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            href="https://www.google.com"
+            onClick={()=>window.open(`https://www.facebook.com/profile.php?id=100017390656704`,"__blank")}
+            href="https://www.facebook.com/profile.php?id=100017390656704"
             className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer"
             fill="currentColor"
             viewBox="0 0 24 24"
@@ -57,6 +58,7 @@ const Socials = () => {
           {/* <!-- Twitter --> */}    
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            onClick={()=>window.open(`https://twitter.com/tnvrahmed98`,"__blank")}
             className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer"
             fill="currentColor"
             viewBox="0 0 24 24"
@@ -65,6 +67,8 @@ const Socials = () => {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            
+            onClick={()=>window.open(`https://www.instagram.com/tanveer_ahmed20/`,"__blank")}
             className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer"
             fill="currentColor"
             viewBox="0 0 24 24"
@@ -74,6 +78,8 @@ const Socials = () => {
 
           {/* <!-- Linkedin --> */}
           <svg
+              
+              onClick={()=>window.open(`https://www.linkedin.com/in/tanveer-ahmed-589055112/`,"__blank")}
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer"
             fill="currentColor"
@@ -84,6 +90,7 @@ const Socials = () => {
 
           {/* <!-- Github --> */}
           <svg
+           onClick={()=>window.open(`https://github.com/tanveer-98`,"__blank")}
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer"
             fill="currentColor"
@@ -96,6 +103,8 @@ const Socials = () => {
         
           <svg
             xmlns="http://www.w3.org/2000/svg"
+            
+            onClick={()=>window.open(`https://wa.me/7002068268`,"__blank")}
             className="h-5 w-5 hover:scale-150 transition-all duration-500 hover:cursor-pointer hover:translate-y-7"
             fill="currentColor"
             viewBox="0 0 24 24"

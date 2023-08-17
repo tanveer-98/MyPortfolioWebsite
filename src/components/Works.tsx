@@ -11,7 +11,7 @@ import ProjectCard from "./ProjectCard";
 const ProjectTypes = [
   { name: "Full Stack", id: 1 },
   { name: "Backend", id: 2 },
-  // { name: "javascript", id: 3 },
+  { name: "Frontend", id: 3 },
 ];
 
 interface ITag {
