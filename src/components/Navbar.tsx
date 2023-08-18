@@ -1,14 +1,14 @@
-import React from 'react'
-import {styled, css} from 'styled-components';
-
-interface ListProps{
-    hover ? : boolean;
+import React from "react";
+import { styled, css } from "styled-components";
+import { Link } from "react-scroll";
+interface ListProps {
+  hover?: boolean;
 }
 
 const Section = styled.div`
-  display:flex;
-  justify-content:center;
-`
+  display: flex;
+  justify-content: center;
+`;
 
 const Container = styled.div`
 width: 100%;
@@ -19,15 +19,15 @@ align-items:center;
 padding:10px;                                                                                          
 
  }
-`
+`;
 const Icons = styled.div`
-display:flex;
-gap:20px;
-`  
-const Links  = styled.div`
-gap:30px;
-display : flex ;
-${props =>`
+  display: flex;
+  gap: 20px;
+`;
+const Links = styled.div`
+  gap: 30px;
+  display: flex;
+  ${(props) => `
       /* Media query styles */
       @media (max-width: 768px) {
         display:flex ;
@@ -38,19 +38,18 @@ ${props =>`
         /* Styles for screens up to 480px */
       }
     `}
-
-`
-const Logo  = styled.img`
-height:50px;
-filter: drop-shadow(10px 10px 3px #ffffff);
-`
-const List  = styled.ul`
-align-items:center;
-gap:20px;
-display:flex;
-list-style:none;
-font-family: Poppins, sans-serif;
-${props =>`
+`;
+const Logo = styled.img`
+  height: 50px;
+  filter: drop-shadow(10px 10px 3px #ffffff);
+`;
+const List = styled.ul`
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  list-style: none;
+  font-family: Poppins, sans-serif;
+  ${(props) => `
       /* Media query styles */
       @media (max-width: 768px) {
         display :none;
@@ -61,23 +60,22 @@ ${props =>`
         width:20px;
       }
     `}
-
-`
-const ListItem  = styled.li<ListProps>`
-cursor:pointer;
-font-family:"Roboto", cursive;
-font-size: 1.2rem;
-&:hover{
-    color:#9F2B68
-}
-`
-const Icon  = styled.img`
-height:30px;
-width:30px;
-&:hover{
-    cursor:pointer;
-}
-${props =>`
+`;
+const ListItem = styled.li<ListProps>`
+  cursor: pointer;
+  font-family: "Roboto", cursive;
+  font-size: 1.2rem;
+  &:hover {
+    color: #9f2b68;
+  }
+`;
+const Icon = styled.img`
+  height: 30px;
+  width: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+  ${(props) => `
       /* Media query styles */
       @media (max-width: 768px) {
         height:20px;
@@ -89,48 +87,73 @@ ${props =>`
         width:20px;
       }
     `}
-`
-const Button  = styled.button`
-width: 100px;
-padding:0 10px;
-background-color: #da4ea2;
-color:white; 
-border-radius: 5px;
-cursor:pointer;
-border:none;
-&:hover{
-    background-color: #0132fb
-}
-`
+`;
+const Button = styled.button`
+  width: 100px;
+  padding: 0 10px;
+  background-color: #da4ea2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: #0132fb;
+  }
+`;
 
-import File from '../assets/Tanveer_Ahmed_Resume.pdf';
-
+import File from "../assets/Tanveer_Ahmed_Resume.pdf";
 
 const Navbar = () => {
   return (
     <Section>
-        <Container>
-            <Links>
-            <Logo className="h-[50px] w-[100px]" src="./img/logo.png"/>
+      <Container>
+        <Links>
+          <Logo className="h-[50px] w-[100px]" src="./img/logo.png" />
 
-            <List>
-                <ListItem>Home</ListItem>
-                {/* <ListItem>Studio</ListItem> */}
-                <ListItem>Works</ListItem>
-                <ListItem>Contact</ListItem>
-            </List>
-            </Links>
-            <Icons >
-                <Icon src="./img/search.png"/>
-                <Button>
-                <a href={File} download={File}> Resume</a>
-
-                </Button>
-            </Icons>
-        </Container>
-
+          <List>
+            <ListItem>Home</ListItem>
+            {/* <ListItem>Studio</ListItem> */}
+            <ListItem>
+              <Link
+                activeClass="active"
+                className=""
+                to="works"
+                spy={true}
+                offset={-100}
+                smooth={true}
+                duration={500}
+              >
+                Works
+              </Link>
+            </ListItem>
+            <ListItem>Contact</ListItem>
+            <ListItem>
+              <Link
+                activeClass="active"
+                className=""
+                to="socials"
+                spy={true}
+                offset={-100}
+                smooth={true}
+                duration={500}
+              >
+                Socials
+              </Link>
+            </ListItem>
+          </List>
+        </Links>
+        <Icons>
+          {/* <Icon src="./img/search.png"/> */}
+          <Button>
+            <a href={File} download={File}>
+              {" "}
+              Resume
+            </a>
+          </Button>
+        </Icons>
+      </Container>
     </Section>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

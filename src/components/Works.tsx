@@ -63,7 +63,7 @@ const Works = () => {
 
   return (
     <>
-      <div className={styles.paddingX + styles.paddingY}>
+      <div id="works" className={styles.paddingX + styles.paddingY}>
         <motion.div variants={textVariant(1)}>
           <p className={styles.sectionSubText}> My Work</p>
           <h2 className={styles.sectionHeadText}> Project.. </h2>

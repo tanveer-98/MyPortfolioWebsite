@@ -39,7 +39,7 @@ const Heading = styled.div`
 
 const Socials = () => {
   return (
-    <div className={styles.paddingX + styles.paddingY + styles.sectionFlex}>
+    <div id="socials" className={styles.paddingX + styles.paddingY + styles.sectionFlex}>
       <Container>
         <h3 className={styles.sectionHeadText}>My Socials</h3>
         <SocialsContainer>
