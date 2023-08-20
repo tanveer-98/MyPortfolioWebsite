@@ -159,7 +159,7 @@ const Hero = () => {
             <Line src="./img/line.png"></Line>
             <Subtitle>What I Do ?</Subtitle>
           <SubTitle>
-            Eat.Sleep.WebApp.Repeat
+            I am  a Full Stack Developer
           </SubTitle>
           </WhatIDo>
           <Desc>I enjoy Creating WebApps and Websites</Desc>
