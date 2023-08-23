@@ -1,10 +1,11 @@
-import React from 'react'
-import styled from 'styled-components';
-import Navbar from './Navbar';
-import AnimatedHand from './AnimatedHand';
-import { SectionWrapper } from '../hoc/SectionWrapper';
+import React from "react";
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import AnimatedHand from "./AnimatedHand";
+import { SectionWrapper } from "../hoc/SectionWrapper";
 
 const Section = styled.div`
+  margin-top: 100px;
   height: 100%;
   scroll-snap-align: center;
   display: flex;
@@ -18,7 +19,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  height:100vh;
+  height: 100%;
 
   scroll-snap-align: center;
   width: 90%;
@@ -35,13 +36,13 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 2;
+  // flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  height : 100%;
+  height: 100%;
 
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -52,7 +53,7 @@ const Left = styled.div`
 const Title = styled.h1`
   font-size: 4.5vw;
   font-weight: bold;
-  display:block;
+  display: block;
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
@@ -101,14 +102,14 @@ const Button = styled.button`
 `;
 
 const Right = styled.div`
-  flex: 3;
+  // flex: 3;
   // display : flex;
   position: relative;
- 
-  @media only screen and (max-width: 768px) {
-    flex: 0;
-    height: 300px;
-    width: 100%;
+  // height: 800px;
+  background-color: #ffffff @media only screen and (max-width: 768px) {
+    // flex: 0;
+    height: 500px;
+    width: 400px;
   }
 `;
 
@@ -116,7 +117,7 @@ const Img = styled.img`
   width: 800px;
   height: 600px;
   object-fit: contain;
-  position: absolute;
+  position: relative
   top: 0;
   bottom: 0;
   left: 0;
@@ -137,7 +138,6 @@ const Img = styled.img`
   }
 `;
 
-
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -145,36 +145,33 @@ import { fadeIn, textVariant } from "../utils/motion";
 const Hero = () => {
   return (
     <Section>
-      <Navbar/>
+      <Navbar />
       <Container>
         <motion.div>
-        <Left>
-          <Title className="font-roboto">
-            Hi !   <div className="flex justify-center items-center">
-              <div className="text-purple-400">I am Tanveer <AnimatedHand/></div> 
-           
+          <Left>
+            <Title className="font-roboto">
+              Hi !{" "}
+              <div className="flex justify-center items-center">
+                <div className="text-purple-400">
+                  I am Tanveer <AnimatedHand />
+                </div>
               </div>
-          </Title>
-          <WhatIDo>
-            <Line src="./img/line.png"></Line>
-            <Subtitle>What I Do ?</Subtitle>
-          <SubTitle>
-            I am  a Full Stack Developer
-          </SubTitle>
-          </WhatIDo>
-          <Desc>I enjoy Creating WebApps and Websites</Desc>
-        </Left>
+            </Title>
+            <WhatIDo>
+              <Line src="./img/line.png"></Line>
+              <Subtitle>What I Do ?</Subtitle>
+              <SubTitle>I am a Full Stack Developer</SubTitle>
+            </WhatIDo>
+            <Desc>I Enjoy Creating WebApps and Websites</Desc>
+          </Left>
         </motion.div>
         <Right>
           {/* 3D model */}
-          <Img src="./img/moon.png"/>
+          <Img src="./img/moon.png" />
         </Right>
       </Container>
-
-      
-      
     </Section>
-  )
-}
+  );
+};
 
 export default Hero;

@@ -13,6 +13,10 @@ const SkillsList = [
 
 const Section = styled.div`
     // height: 100vh;
+    // margin-top :200px;
+    @media only screen and (width: 768px) {
+      // margin-top : -100px;
+    }
     // background-color:white;
     scroll-snap-align : center;
     display: flex;
@@ -78,17 +82,17 @@ const Skills = () => {
   return (
     <Section> 
       <Container>
-        <Left>
           <List>
             {SkillsList.map((skill)=>{
                return <ListItem>{skill}</ListItem> 
               })
             }
           </List>
-        </Left>
-        <Right>
+        {/* <Left>
+        </Left> */}
+        {/* <Right>
           
-        </Right>
+        </Right> */}
       </Container>
 
     </Section>

@@ -4,19 +4,30 @@ import { Link } from "react-scroll";
 interface ListProps {
   hover?: boolean;
 }
-
+window.addEventListener('scrollY',()=>{
+  console.log(window.scrollY.valueOf())
+})
 const Section = styled.div`
   display: flex;
+  width: 100%;
+  position :fixed;
+  top:0;
   justify-content: center;
+ 
+  
+   z-index: 1000;
+
 `;
 
 const Container = styled.div`
 width: 100%;
+// background-color : #ffffff;
 display: flex;
 gap:30px;           
-justify-content:space-between;
+justify-content:space-around;
 align-items:center;
-padding:10px;                                                                                          
+padding:10px;     
+background: 'red'                                                                                     
 
  }
 `;
@@ -105,8 +116,10 @@ import File from "../assets/Tanveer_Ahmed_Resume.pdf";
 
 const Navbar = () => {
   return (
-    <Section>
+    <Section className={``}>
       <Container>
+      <div className="flex  gap-10">
+
         <Links>
           <Logo className="h-[50px] w-[100px]" src="./img/logo.png" />
 
@@ -151,6 +164,7 @@ const Navbar = () => {
             </a>
           </Button>
         </Icons>
+      </div>
       </Container>
     </Section>
   );
