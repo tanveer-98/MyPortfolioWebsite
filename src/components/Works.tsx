@@ -46,14 +46,13 @@ const Works = () => {
   };
 
   useEffect(() => {
-    if(currentType !=="all"){
+    if (currentType !== "all") {
       const filteredProjects = projects.filter(
         (project: IProject) => project.type === currentType
       );
-      setSelected(filteredProjects);    
-    }
-    else {
-      setSelected(projects)
+      setSelected(filteredProjects);
+    } else {
+      setSelected(projects);
     }
   }, [currentType]);
 
@@ -63,8 +62,24 @@ const Works = () => {
 
   return (
     <>
-      <div id="works" className={styles.paddingX }>
-        <motion.div variants={textVariant(1)}>
+      <div id="works" className={styles.paddingX}>
+        <motion.div
+          variants={{
+            hidden: {
+              y: -50,
+              opacity: 0,
+            },
+            show: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                duration: 1.25,
+                delay: 1,
+              },
+            },
+          }}
+        >
           <p className={styles.sectionSubText}> My Work</p>
           <h2 className={styles.sectionHeadText}> Project.. </h2>
         </motion.div>
@@ -94,10 +109,7 @@ const Works = () => {
           id="projectType"
           className="bg-slate-400 text-black text-sm rounded-md p-2"
         >
-          <option
-            value="all"
-            className="bg-slate-400 rounded-md text-white"
-          >
+          <option value="all" className="bg-slate-400 rounded-md text-white">
             All Projects
           </option>
           {ProjectTypes.map((type) => (
@@ -110,15 +122,15 @@ const Works = () => {
           ))}
         </select>
         <div className="mt-20 flex flex-wrap gap-7">
-          {(selected && selected.length!=0 && selected !== null) ? (
+          {selected && selected.length != 0 && selected !== null ? (
             selected.map((project, index) => (
               // <div >
-                <ProjectCard index={index} {...project}></ProjectCard>
+              <ProjectCard index={index} {...project}></ProjectCard>
               // </div>
             ))
-          ) : 
+          ) : (
             <h1 className="text-white text-4xl font-bold">No Projects</h1>
-          }
+          )}
         </div>
       </div>
     </>
