@@ -63,29 +63,29 @@ const Works = () => {
   return (
     <>
       <div id="works" className={styles.paddingX}>
-        <motion.div
-          variants={{
-            hidden: {
-              y: -50,
-              opacity: 0,
-            },
-            show: {
-              y: 0,
-              opacity: 1,
-              transition: {
-                type: "spring",
-                duration: 1.25,
-                delay: 1,
-              },
-            },
-          }}
+        <div
+          // variants={{
+          //   hidden: {
+          //     y: -50,
+          //     opacity: 0,
+          //   },
+          //   show: {
+          //     y: 0,
+          //     opacity: 1,
+          //     transition: {
+          //       type: "spring",
+          //       duration: 1.25,
+          //       delay: 1,
+          //     },
+          //   },
+          // }}
         >
           <p className={styles.sectionSubText}> My Work</p>
           <h2 className={styles.sectionHeadText}> Project.. </h2>
-        </motion.div>
+        </div>
         <div className="w-full flex">
-          <motion.p
-            variants={fadeIn("left", "fade", 0.1, 1)}
+          <p
+            // variants={fadeIn("left", "fade", 0.1, 1)}
             className="mt-3 text-secondary text-[17px] 
      max-w-3xl leading-[30px]"
           >
@@ -94,7 +94,7 @@ const Works = () => {
             with links to code repositories and live demos in it. It reflects my
             ability to solve complex problems, work with different technologies
             and manager projects efficiently.
-          </motion.p>
+          </p>
         </div>
 
         <label
