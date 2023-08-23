@@ -37,7 +37,7 @@ const ProjectCard = ({
         speed: 450,
       }}
       className=" relative bg-tertiary p-5 rounded-2xl
-       sm:w-[360px] w-full h-full"
+       md:w-[360px] w-[200] h-full"
     >
       <div className=" w-full h-full" key={index}>
 

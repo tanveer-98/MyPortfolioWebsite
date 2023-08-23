@@ -4,9 +4,15 @@ import { Link } from "react-scroll";
 interface ListProps {
   hover?: boolean;
 }
-window.addEventListener('scrollY',()=>{
-  console.log(window.scrollY.valueOf())
-})
+window.addEventListener('scroll', () => {
+  // Do something
+  // Can't use `preventDefault` here
+  const yPos = window.scrollY;
+  console.log(yPos);
+
+}, { passive: true });
+
+
 const Section = styled.div`
   display: flex;
   width: 100%;
