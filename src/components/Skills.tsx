@@ -4,11 +4,12 @@ import { SectionWrapper } from '../hoc/SectionWrapper';
 
 const SkillsList = [
   "ReactJS",
+  "ReduxJS",
   "NodeJS",
   "MongoDB",
   "ExpressJS",
   "SpringBoot",
-  "SQL",
+  "SQL"
 ]
 
 const Section = styled.div`
@@ -44,7 +45,7 @@ flex:1 ;
 `
 // @ts-ignore
 const ListItem = styled.li`
-font-size: 100px;
+font-size: 60px;
 font-weight: bold;
 cursor:pointer;
 color:transparent;

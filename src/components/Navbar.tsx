@@ -1,16 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled, css } from "styled-components";
 import { Link } from "react-scroll";
 interface ListProps {
   hover?: boolean;
 }
-window.addEventListener('scroll', () => {
-  // Do something
-  // Can't use `preventDefault` here
-  const yPos = window.scrollY;
-  console.log(yPos);
-
-}, { passive: true });
 
 
 const Section = styled.div`
@@ -121,10 +114,20 @@ const Button = styled.button`
 import File from "../assets/Tanveer_Ahmed_Resume.pdf";
 
 const Navbar = () => {
+  const [navcolor , setnavcolor] = useState(false);
+  window.addEventListener('scroll', () => {
+    const yPos = window.scrollY;
+    if(yPos >100 ){
+        setnavcolor(true);
+    }
+    else setnavcolor(false)
+  
+  }, {passive : true});
+  
   return (
-    <Section className={``}>
+    <Section className={` transition-all duration-500 py-2  ${navcolor ? "bg-black bg-opacity-70 shadow-sm shadow-gray-400" : ""}  `}>
       <Container>
-      <div className="flex  gap-10">
+      <div className="flex gap-10">
 
         <Links>
           <Logo className="h-[50px] w-[100px]" src="./img/logo.png" />
