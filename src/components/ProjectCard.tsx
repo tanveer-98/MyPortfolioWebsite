@@ -24,6 +24,7 @@ const ProjectCard = ({
   image,
   type,
   source_code_link,
+  site_link
 }: any) => {
   console.log("KEY" + id);
   return (
@@ -79,7 +80,7 @@ const ProjectCard = ({
             </div>
           </div>
           <div
-            onClick={() => window.open(source_code_link, "_blank")}
+            onClick={() => window.open(site_link, "_blank")}
             // __blank means url will open in a new window
 
             className="rounded-full bg-gradient  w-10 h-10 flex hover:scale-110  justify-center items-center cursor-pointer"

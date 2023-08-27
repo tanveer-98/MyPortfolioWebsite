@@ -378,4 +378,20 @@ import {
               image: "./img/noimage.png",
               source_code_link: "https://github.com/tanveer-98/chat-app-nodejs",
             },
+            {
+              id: 9, 
+                name: "Password Generator",
+                description:
+                  "Generate Password upto length 100",
+                tags: [
+                  {
+                    name: "reactjs",
+                     color: "blue-text-gradient",
+                  }
+                ],
+                type : "Frontend",
+                image: "./img/passgen.png",
+                source_code_link: "https://github.com/tanveer-98/password-generator",
+                site_link : "https://genpasswrd.netlify.app/"
+              },
   ];

@@ -26,6 +26,7 @@ interface IProject {
   image: string;
   type: string;
   source_code_link: string;
+  site_link ? : string;
 }
 
 const Loading = styled.div`
@@ -90,7 +91,7 @@ const Works = () => {
      max-w-3xl leading-[30px]"
           >
             Following projects showcare my skills and experience through
-            real-world examples of my work .Each project is breiefly described
+            real-world examples of my work .Each project is briefly described
             with links to code repositories and live demos in it. It reflects my
             ability to solve complex problems, work with different technologies
             and manager projects efficiently.
