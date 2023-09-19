@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import styled from 'styled-components';
 import Works from './components/Works'
 import Footer from './components/Footer'
+import Technologies from './components/Technologies'
 
 const Container = styled.div`
 height : 100% ; 
@@ -33,7 +34,9 @@ function App() {
    <Container>
       <Hero/>
       <Skills/>      
+      <Technologies/>
       <Works/>
+
       <Contact/>
       {/* <Who/> */}
       <Footer/>

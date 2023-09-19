@@ -60,7 +60,7 @@ import {
     },
   ];
   
-  const technologies = [
+  export const technologies = [
     {
       name: "HTML 5",
       icon: html,
@@ -98,21 +98,9 @@ import {
       icon: mongodb,
     },
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
       name: "git",
       icon: git,
-    },
-    {
-      name: "SpringBoot",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    }
+    } 
   ];
 
   
@@ -272,7 +260,8 @@ import {
       ],
       type : "Full Stack",
       image: "./img/crystal.png",
-      source_code_link: "https://www.crystalcoaching.in/",
+      source_code_link: "",
+      site_link : "https://www.crystalcoaching.in/"
     },
     {
       id: 5, 
@@ -299,7 +288,8 @@ import {
         ],
         type : "Full Stack",
         image: "./img/apex.png",
-        source_code_link: "https://www.apexconst.in",
+        source_code_link: "",
+        site_link:"https://www.apexconst.in"
       },
       {
         id: 6, 
@@ -324,6 +314,7 @@ import {
           type : "Backend",
           image: "./img/noimage.png",
           source_code_link: "https://github.com/tanveer-98/TaskManagement-App",
+          site_link : ""
         },
 
         {
@@ -348,7 +339,8 @@ import {
             ],
             type : "Backend",
             image: "./img/noimage.png",
-            source_code_link: "https://www.apexconst.in",
+            source_code_link: "",
+            site_link : "https://www.apexconst.in"
           },
           {
             id: 8, 
@@ -376,6 +368,7 @@ import {
               ],
               type : "Backend",
               image: "./img/noimage.png",
+              site_link : "",
               source_code_link: "https://github.com/tanveer-98/chat-app-nodejs",
             },
             {
@@ -388,10 +381,40 @@ import {
                     name: "reactjs",
                      color: "blue-text-gradient",
                   }
+                
                 ],
                 type : "Frontend",
                 image: "./img/passgen.png",
                 source_code_link: "https://github.com/tanveer-98/password-generator",
                 site_link : "https://genpasswrd.netlify.app/"
               },
+              {
+
+                id: 10, 
+                name: "Weatheroo",
+                description:
+                  "A Weather Live Forecast App with user Authentication",
+                tags: [
+                  {
+                    name: "reactjs",
+                     color: "blue-text-gradient",
+                  },
+                  {
+                    name: "nodeJs",
+                    color: "blue-text-gradient",
+                  },
+                  {
+                    name: "mongodb",
+                    color: "green-text-gradient",
+                  },
+                  {
+                    name: "expressJS",
+                    color: "pink-text-gradient",
+                  },
+                ],
+                type : "Full Stack",
+                image: "./img/weatheroo.png",
+                source_code_link: "https://github.com/tanveer-98/password-generator",
+                site_link : "https://weatheroo-app.netlify.app/"
+              }
   ];

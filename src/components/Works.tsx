@@ -25,7 +25,7 @@ interface IProject {
   tags: Array<ITag>;
   image: string;
   type: string;
-  source_code_link: string;
+  source_code_link?: string;
   site_link ? : string;
 }
 
@@ -40,7 +40,7 @@ const Loading = styled.div`
 
 const Works = () => {
   const [currentType, setCurrentType] = useState<string>("all");
-  const [selected, setSelected] = useState<Array<IProject> | null>(projects);
+  const [selected, setSelected] = useState<any>(projects);
 
   const handlecurrentType = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setCurrentType(e.target.value);
@@ -124,7 +124,7 @@ const Works = () => {
         </select>
         <div className="mt-20 flex flex-wrap gap-7">
           {selected && selected.length != 0 && selected !== null ? (
-            selected.map((project, index) => (
+            selected.map((project:any, index : number) => (
               // <div >
               <ProjectCard index={index} {...project}></ProjectCard>
               // </div>
