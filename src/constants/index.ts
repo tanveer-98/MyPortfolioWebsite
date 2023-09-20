@@ -414,7 +414,7 @@ import {
                 ],
                 type : "Full Stack",
                 image: "./img/weatheroo.png",
-                source_code_link: "https://github.com/tanveer-98/password-generator",
+                source_code_link: "https://github.com/tanveer-98/weatheroo",
                 site_link : "https://weatheroo-app.netlify.app/"
               }
   ];
